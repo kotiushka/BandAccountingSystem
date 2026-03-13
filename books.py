@@ -1,0 +1,101 @@
+from book_accounting_system.books.AudioBook import AudioBook
+from book_accounting_system.books.Book import Book
+from book_accounting_system.books.EBook import EBook
+from book_accounting_system.books.PhysicalBook import PhysicalBook
+from book_accounting_system.enumerations.BookFormat import BookFormat
+
+books: dict[str, Book] = {
+    "9780451524935": EBook(
+        title="1984",
+        author="Джордж Оруэлл",
+        isbn="9780451524935",
+        year=1949,
+        description="Классическая антиутопия",
+        book_format=BookFormat.EPUB,
+        file_size_mb=2,
+    ),
+    "9780747532743": AudioBook(
+        title="Гарри Поттер и философский камень",
+        author="Дж. К. Роулинг",
+        isbn="9780747532743",
+        year=1997,
+        description="Первая книга о мальчике-волшебнике",
+        duration_minutes=480,
+        book_format=BookFormat.CD_AUDIO,
+        narrator="Стивен Фрай (рус. дубляж)",
+    ),
+    "9785171345678": PhysicalBook(
+        title="Мастер и Маргарита",
+        author="Михаил Булгаков",
+        isbn="9785171345678",
+        year=1967,
+        description="Роман о дьяволе в Москве",
+        book_format=BookFormat.A,
+        shelf=13,
+    ),
+    "9780307474728": EBook(
+        title="To Kill a Mockingbird",
+        author="Harper Lee",
+        isbn="9780307474728",
+        year=1960,
+        book_format=BookFormat.MOBI,
+        description="Классика американской литературы",
+        file_size_mb=3,
+    ),
+    "9780553211405": PhysicalBook(
+        title="Pride and Prejudice",
+        author="Jane Austen",
+        isbn="9780553211405",
+        year=1813,
+        description="Роман о любви и обществе",
+        book_format=BookFormat.HARDCOVER,
+        shelf=1,
+    ),
+    "9789660389441": AudioBook(
+        title="451 градус по Фаренгейту",
+        author="Рэй Брэдбери",
+        isbn="9789660389441",
+        year=1953,
+        description="Дистопия о сжигании книг",
+        duration_minutes=390,
+        book_format=BookFormat.CD_AUDIO,
+        narrator="Александр Клюквин",
+    ),
+    "9785001390120": PhysicalBook(
+        title="Тень ветра",
+        author="Карлос Руис Сафон",
+        isbn="9785001390120",
+        year=2001,
+        description="Мистический детектив в Барселоне",
+        book_format=BookFormat.B,
+        shelf=12,
+    ),
+    "9785170896547": EBook(
+        title="Дюна",
+        author="Фрэнк Герберт",
+        isbn="9785170896547",
+        year=1965,
+        book_format=BookFormat.PDF,
+        description="Эпическая научная фантастика",
+        file_size_mb=5,
+    ),
+    "9789660387126": AudioBook(
+        title="Маленький принц",
+        author="Антуан де Сент-Экзюпери",
+        isbn="9789660387126",
+        year=1943,
+        description="Философская сказка",
+        duration_minutes=105,
+        book_format=BookFormat.CD_AUDIO,
+        narrator="Евгений Миронов",
+    ),
+    "9785699923458": PhysicalBook(
+        title="Шантарам",
+        author="Грегори Дэвид Робертс",
+        isbn="9785699923458",
+        year=2003,
+        description="Автобиографический роман об Индии",
+        book_format=BookFormat.A,
+        shelf=315,
+    )
+}
